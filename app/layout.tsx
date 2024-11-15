@@ -2,6 +2,11 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Layout } from "@/types/Layout";
 import { Inter } from "next/font/google";
+import { title, description } from "@/locales/texts";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/components/Theme/ThemeProvider";
+import { Separator } from "@/components/ui/separator";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -9,20 +14,33 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Maria Filippini Lazzari",
-  description:
-    "Maria Filippini Lazzari sito ufficiale scrittrice dialettale bresciana",
+  title,
+  description,
   openGraph: {
-    title: "Maria Filippini Lazzari",
-    description:
-      "Maria Filippini Lazzari sito ufficiale scrittrice dialettale bresciana",
+    title,
+    description,
   },
 };
 
 function RootLayout({ children }: Layout) {
   return (
-    <html className={inter.className} lang="it">
-      <body>{children}</body>
+    <html lang="it">
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <Separator />
+          <main className="p-4 w-full h-[calc(100dvh-100px)] overflow-y-auto">
+            {children}
+          </main>
+          <Separator />
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
