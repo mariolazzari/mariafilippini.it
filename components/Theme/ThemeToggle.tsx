@@ -22,20 +22,20 @@ export function ThemeToggle() {
   const renderIcon = () => {
     switch (theme) {
       case "light":
-        return <Sun />;
+        return <Sun size={28} />;
 
       case "dark":
-        return <Moon />;
+        return <Moon size={28} />;
 
       default:
-        return <Settings />;
+        return <Settings size={28} />;
     }
   };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button className="rounded-full" variant="ghost" size="icon">
           {renderIcon()}
         </Button>
       </DropdownMenuTrigger>

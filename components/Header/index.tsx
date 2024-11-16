@@ -1,29 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/Theme/ThemeToggle";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { links } from "@/lib/links";
 
 export function Header() {
-  const links = [
-    { label: "Home", href: "/" },
-    { label: "Biografia", href: "/bio" },
-    { label: "Opere", href: "/works" },
-    { label: "Eventi", href: "/events" },
-    { label: "Contatti", href: "/contacts" },
-  ];
-
   return (
-    <header className="h-[50px] flex items-center">
-      <nav className="flex justify-between flex-1 px-4">
-        <Avatar>
-          <AvatarImage src="/logo.jpg" />
-          <AvatarFallback>MF</AvatarFallback>
-        </Avatar>
+    <header className="h-[50px]">
+      <nav className="flex justify-between items-center flex-1 px-4">
+        <Image
+          className="rounded-full"
+          src="/logo.jpg"
+          alt="logo"
+          width={28}
+          height={28}
+          priority
+        />
 
-        <ul className="flex gap-1">
-          {links.map(({ label, href }) => (
+        <ul className="flex gap-2">
+          {links.map(({ label, href, icon }) => (
             <li key={href}>
-              <Link className="font-semibold" href={href}>
-                {label}
+              <Link className="font-semibold flex gap-1" href={href}>
+                {icon} {label}
               </Link>
             </li>
           ))}

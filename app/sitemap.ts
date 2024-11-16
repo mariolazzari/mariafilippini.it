@@ -1,9 +1,8 @@
 import type { MetadataRoute } from "next";
+import { routes } from "@/lib/links";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const urls = ["/"];
-
-  const data: MetadataRoute.Sitemap = urls.map(url => ({
+  const data: MetadataRoute.Sitemap = routes.map(url => ({
     url: `https://mariafilippini.it${url}`,
     lastModified: new Date(),
     changeFrequency: "daily",
