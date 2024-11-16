@@ -9,14 +9,14 @@ export function Header() {
       <nav className="flex justify-between items-center flex-1 px-4">
         <Image
           className="rounded-full"
-          src="/logo.jpg"
+          src="/images/logo.jpg"
           alt="logo"
           width={28}
           height={28}
           priority
         />
 
-        <ul className="flex gap-2">
+        <ul className="hidden md:flex gap-2">
           {links.map(({ label, href, icon }) => (
             <li key={href}>
               <Link className="font-semibold flex gap-1" href={href}>
@@ -25,6 +25,7 @@ export function Header() {
             </li>
           ))}
         </ul>
+
         <div>
           <ThemeToggle />
         </div>
