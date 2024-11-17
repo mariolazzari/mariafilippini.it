@@ -7,7 +7,7 @@ import { CardImageProps } from "@/components/CardImage/CardImageProps";
 import { CardImage } from "@/components/CardImage";
 
 function HomePage() {
-  const cards: CardImageProps[] = [
+  const cards: Omit<CardImageProps, "href">[] = [
     {
       title: "Per le compagnie amatoriali",
       subtitle:
@@ -72,7 +72,7 @@ function HomePage() {
 
       <div className="my-8 flex justify-center items-center gap-24 flex-wrap">
         {cards.map(card => (
-          <CardImage key={card.title} {...card} />
+          <CardImage key={card.title} {...card} href="/works" />
         ))}
       </div>
     </main>

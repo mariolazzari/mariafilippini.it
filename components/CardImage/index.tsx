@@ -10,11 +10,11 @@ import {
 import { CardImageProps } from "./CardImageProps";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { Book } from "lucide-react";
+import { LinkIcon } from "lucide-react";
 
-export function CardImage({ title, subtitle, imageSrc }: CardImageProps) {
+export function CardImage({ title, subtitle, imageSrc, href }: CardImageProps) {
   return (
-    <Link href="/works">
+    <Link href={href}>
       <Card className="w-[350px]">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
@@ -28,8 +28,8 @@ export function CardImage({ title, subtitle, imageSrc }: CardImageProps) {
         </CardContent>
 
         <CardFooter>
-          <Button variant="secondary">
-            <Book /> Opere
+          <Button className="rounded-full" variant="secondary" size="icon">
+            <LinkIcon />
           </Button>
         </CardFooter>
       </Card>
