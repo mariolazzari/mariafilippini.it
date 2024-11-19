@@ -3,7 +3,7 @@ import { Work } from "@/components/Work";
 import { acts } from "@/data/acts";
 import { filterWorks } from "@/lib/texts";
 import { PageProps } from "@/types/PageProps";
-import { Clapperboard, Divide } from "lucide-react";
+import { Clapperboard } from "lucide-react";
 
 async function ActsPage({ searchParams }: PageProps<{}, { search: string }>) {
   const { search = "" } = await searchParams;
@@ -13,7 +13,7 @@ async function ActsPage({ searchParams }: PageProps<{}, { search: string }>) {
       <Clapperboard className="mx-auto" size={48} />
 
       <h2 className="text-4xl text-center">Atti unici divertenti e farse</h2>
-      <SearchInput />
+      <SearchInput href="/works/acts" />
 
       <div className="flex justify-center items-center gap-16 flex-wrap">
         {filterWorks(acts, search).map(act => (

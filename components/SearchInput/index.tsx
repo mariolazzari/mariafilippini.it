@@ -4,8 +4,9 @@ import { ChangeEventHandler, MouseEventHandler, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { SearchInputProps } from "./SearchInputProps";
 
-export function SearchInput() {
+export function SearchInput({ href }: SearchInputProps) {
   const [search, setSearch] = useState("");
   const router = useRouter();
 
@@ -14,18 +15,18 @@ export function SearchInput() {
     setSearch(value);
 
     if (value) {
-      return router.push("/works/acts?search=" + value);
+      return router.push(`/works/acts?search=${search}`);
     }
-    router.push("/works/acts");
+    router.push(href);
   };
 
   const onResetClick = () => {
     setSearch("");
-    router.push("/works/acts");
+    router.push(href);
   };
 
   const onSearchCick: MouseEventHandler<HTMLButtonElement> = () => {
-    router.push("/works/acts?search=" + search);
+    router.push(`/works/acts?search=${search}`);
   };
 
   return (
@@ -39,7 +40,7 @@ export function SearchInput() {
       <Button className="w-24" variant="secondary" onClick={onResetClick}>
         Tutti
       </Button>
-      <Button className="w-24" onClick={onSearchCick}>
+      <Button className="w-24" disabled={search === ""} onClick={onSearchCick}>
         Cerca
       </Button>
     </div>

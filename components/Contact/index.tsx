@@ -11,7 +11,7 @@ export function Contact({
   mail,
 }: ContactProps) {
   return (
-    <div className="w-[350px] h-[400px] p-4 border border-primary rounded-xl">
+    <div className="w-[350px] h-[400px] p-4 border border-primary rounded-xl bg-muted">
       <Image
         className="rounded-full mx-auto mb- shadow-md"
         src={imageSrc}
