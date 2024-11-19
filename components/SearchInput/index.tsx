@@ -15,7 +15,7 @@ export function SearchInput({ href }: SearchInputProps) {
     setSearch(value);
 
     if (value) {
-      return router.push(`/works/acts?search=${search}`);
+      return router.push(`${href}?search=${value}`);
     }
     router.push(href);
   };
@@ -26,7 +26,7 @@ export function SearchInput({ href }: SearchInputProps) {
   };
 
   const onSearchCick: MouseEventHandler<HTMLButtonElement> = () => {
-    router.push(`/works/acts?search=${search}`);
+    router.push(`${href}?search=${search}`);
   };
 
   return (

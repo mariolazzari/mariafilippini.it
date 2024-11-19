@@ -19,7 +19,7 @@ export function Drawer() {
         <Menu />
       </SheetTrigger>
 
-      <SheetContent>
+      <SheetContent className="w-[300px]">
         <SheetHeader>
           <SheetTitle>{title}</SheetTitle>
           <SheetDescription>{subTitle}</SheetDescription>

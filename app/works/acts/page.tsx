@@ -1,26 +1,21 @@
-import { SearchInput } from "@/components/SearchInput";
-import { Work } from "@/components/Work";
+import { Works } from "@/components/Works";
 import { acts } from "@/data/acts";
-import { filterWorks } from "@/lib/texts";
 import { PageProps } from "@/types/PageProps";
 import { Clapperboard } from "lucide-react";
 
-async function ActsPage({ searchParams }: PageProps<{}, { search: string }>) {
+type Props = PageProps<{}, { search: string }>;
+
+async function ActsPage({ searchParams }: Props) {
   const { search = "" } = await searchParams;
 
   return (
-    <div className="flex flex-col items-center gap-8">
-      <Clapperboard className="mx-auto" size={48} />
-
-      <h2 className="text-4xl text-center">Atti unici divertenti e farse</h2>
-      <SearchInput href="/works/acts" />
-
-      <div className="flex justify-center items-center gap-16 flex-wrap">
-        {filterWorks(acts, search).map(act => (
-          <Work key={act.title} work={act} />
-        ))}
-      </div>
-    </div>
+    <Works
+      icon={<Clapperboard className="mx-auto" size={48} />}
+      title="Atti unici divertenti e farse"
+      works={acts}
+      search={search}
+      href="/works/acts"
+    />
   );
 }
 
