@@ -37,7 +37,7 @@ export function Event({ event }: EventProps) {
   };
 
   return (
-    <div className="border border-1 p-4 rounded-lg w-[330px] h-[350px]">
+    <div className="border border-1 p-4 rounded-lg w-[330px] h-[350px] bg-muted">
       <div className="w-full">{renderIcon()}</div>
       <h2 className="text-xl text-center my-4 h-[75px]">{title}</h2>
       <h3>{company}</h3>
