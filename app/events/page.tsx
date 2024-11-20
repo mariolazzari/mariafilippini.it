@@ -10,11 +10,10 @@ function EventsPage() {
         </h3>
       );
     }
-
     return (
       <div className="flex justify-center items-center gap-16 flex-wrap container mt-10">
-        {events.map((event, id) => (
-          <Event key={`evt${id}`} event={event} />
+        {events.map((event, key) => (
+          <Event key={key} event={event} />
         ))}
       </div>
     );

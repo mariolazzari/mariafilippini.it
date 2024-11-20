@@ -22,7 +22,7 @@ export function SearchInput({ href }: SearchInputProps) {
   };
 
   const onBackClick = () => {
-    router.back();
+    router.push("/works");
   };
 
   const onSearchCick: MouseEventHandler<HTMLButtonElement> = () => {
