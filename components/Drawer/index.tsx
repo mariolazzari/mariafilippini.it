@@ -17,7 +17,7 @@ export function Drawer() {
   return (
     <Sheet>
       <SheetTrigger>
-        <Menu />
+        <Menu aria-label="Menu" />
       </SheetTrigger>
 
       <SheetContent className="w-[275px] bg-gradient-to-br from-background to-muted border border-muted">

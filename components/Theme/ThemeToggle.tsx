@@ -35,7 +35,12 @@ export function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="rounded-full" variant="ghost" size="icon">
+        <Button
+          className="rounded-full"
+          variant="ghost"
+          size="icon"
+          aria-label="theme"
+        >
           {renderIcon()}
         </Button>
       </DropdownMenuTrigger>
