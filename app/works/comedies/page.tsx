@@ -1,11 +1,9 @@
 import { comedies } from "@/data/comedies";
-import { PageProps } from "@/types/PageProps";
 import { PartyPopper } from "lucide-react";
 import { Works } from "@/components/Works";
+import { WorksPageProps } from "@/types/WorksPageProps";
 
-type Props = PageProps<{}, { search: string }>;
-
-async function ComediesPage({ searchParams }: Props) {
+async function ComediesPage({ searchParams }: WorksPageProps) {
   const { search = "" } = await searchParams;
 
   return (

@@ -1,11 +1,9 @@
 import { Works } from "@/components/Works";
 import { acts } from "@/data/acts";
-import { PageProps } from "@/types/PageProps";
+import { WorksPageProps } from "@/types/WorksPageProps";
 import { Clapperboard } from "lucide-react";
 
-type Props = PageProps<{}, { search: string }>;
-
-async function ActsPage({ searchParams }: Props) {
+async function ActsPage({ searchParams }: WorksPageProps) {
   const { search = "" } = await searchParams;
 
   return (

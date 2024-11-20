@@ -1,8 +1,8 @@
 "use client";
 
 import { ChangeEventHandler, MouseEventHandler, useState } from "react";
-import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SearchInputProps } from "./SearchInputProps";
 
