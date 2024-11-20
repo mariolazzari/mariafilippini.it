@@ -28,7 +28,12 @@ export function CardImage({ title, subtitle, imageSrc, href }: CardImageProps) {
         </CardContent>
 
         <CardFooter>
-          <Button className="rounded-full" variant="secondary" size="icon">
+          <Button
+            className="rounded-full"
+            variant="secondary"
+            size="icon"
+            aria-label="link"
+          >
             <LinkIcon />
           </Button>
         </CardFooter>
