@@ -1,5 +1,5 @@
 import { SearchInput } from "@/components/SearchInput";
-import { Work } from "@/components/Work";
+import { Work } from "@/components/Works/Work";
 import { filterWorks } from "@/lib/texts";
 import { WorksProps } from "./WorksProps";
 
