@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SearchInputProps } from "./SearchInputProps";
+import { Search, ArrowLeft } from "lucide-react";
 
 export function SearchInput({ href }: SearchInputProps) {
   const [search, setSearch] = useState("");
@@ -20,9 +21,8 @@ export function SearchInput({ href }: SearchInputProps) {
     router.push(href);
   };
 
-  const onResetClick = () => {
-    setSearch("");
-    router.push(href);
+  const onBackClick = () => {
+    router.back();
   };
 
   const onSearchCick: MouseEventHandler<HTMLButtonElement> = () => {
@@ -30,19 +30,29 @@ export function SearchInput({ href }: SearchInputProps) {
   };
 
   return (
-    <div className="max-w-xl flex justify-center flex-wrap gap-4">
+    <div className="w-[300px] flex flex-col items-center gap-4">
       <Input
         className="border border-primary"
         value={search}
         onChange={onSearchChange}
         autoFocus
       />
-      <Button className="w-24" variant="secondary" onClick={onResetClick}>
-        Tutti
-      </Button>
-      <Button className="w-24" disabled={search === ""} onClick={onSearchCick}>
-        Cerca
-      </Button>
+
+      <div className="flex justify-center gap-4">
+        <Button className="w-24" variant="secondary" onClick={onBackClick}>
+          <ArrowLeft />
+          Opere
+        </Button>
+
+        <Button
+          className="w-24"
+          disabled={search === ""}
+          onClick={onSearchCick}
+        >
+          <Search />
+          Cerca
+        </Button>
+      </div>
     </div>
   );
 }

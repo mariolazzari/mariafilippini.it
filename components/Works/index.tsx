@@ -12,8 +12,8 @@ export function Works({ icon, title, works, search, href }: WorksProps) {
       <SearchInput href={href} />
 
       <div className="flex justify-center items-center gap-16 flex-wrap">
-        {filterWorks(works, search).map(work => (
-          <Work key={work.title} work={work} />
+        {filterWorks(works, search).map((work, id) => (
+          <Work key={`${work.title}_${id}`} work={work} />
         ))}
       </div>
     </div>

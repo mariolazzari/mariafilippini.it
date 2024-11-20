@@ -18,17 +18,23 @@ export function Work({ work }: WorkProps) {
   } = work;
 
   return (
-    <div className="w-[400px] h-[450px] p-4 border border-primary rounded-xl bg-muted">
+    <div className="w-[350px] md:w-[400px] h-[450px] p-4 border border-secondary hover:border-primary shadow-xl rounded-xl bg- from-muted via-background to-muted">
       <div className="h-[50px]">
         <h2 className="font-semibold text-center">{title}</h2>
         <h3 className="text-xs text-center">{titleDia}</h3>
       </div>
 
-      <Tabs className="my-4 w-full" defaultValue="1">
+      <Tabs className="my-4 w-full" defaultValue={plot ? "1" : "2"}>
         <TabsList className="w-full">
-          <TabsTrigger value="1">Sinossi</TabsTrigger>
-          <TabsTrigger value="2">Attori</TabsTrigger>
-          <TabsTrigger value="3">Tematiche</TabsTrigger>
+          <TabsTrigger value="1" disabled={!plot}>
+            Sinossi
+          </TabsTrigger>
+          <TabsTrigger value="2" disabled={!actors}>
+            Attori
+          </TabsTrigger>
+          <TabsTrigger value="3" disabled={!subject}>
+            Tematiche
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent className="max-h-[280px] overflow-y-auto" value="1">

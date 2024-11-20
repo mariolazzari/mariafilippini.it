@@ -22,7 +22,7 @@ function ContactsPage() {
   return (
     <>
       <h2 className="text-4xl mb-12 text-center">Contatti</h2>
-      <div className="flex justify-center gap-8 flex-wrap">
+      <div className="flex justify-center gap-16 flex-wrap">
         {contacts.map(contact => (
           <Contact key={contact.url} {...contact} />
         ))}

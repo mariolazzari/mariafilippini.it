@@ -11,7 +11,7 @@ export function Contact({
   mail,
 }: ContactProps) {
   return (
-    <div className="w-[350px] h-[400px] p-4 border border-primary rounded-xl bg-muted">
+    <div className="w-[350px] h-[400px] p-4 border border-muted hover:border-primary rounded-xl bg-gradient-to-br from-background to-muted">
       <Image
         className="rounded-full mx-auto mb- shadow-md"
         src={imageSrc}
@@ -23,13 +23,18 @@ export function Contact({
       <h3 className="text-center text-lg mb-12">{description}</h3>
 
       <Link
-        className="flex items-center gap-2 mb-1"
+        className="flex items-center gap-4 mb-1 hover:font-semibold"
         href={`mailto://${mail}`}
         target="_blank"
       >
         <Mail size={20} /> {mail}
       </Link>
-      <Link className="flex items-center gap-2" href={url} target="_blank">
+
+      <Link
+        className="flex items-center gap-4 hover:font-semibold"
+        href={url}
+        target="_blank"
+      >
         <LinkIcon size={20} /> {url}
       </Link>
     </div>

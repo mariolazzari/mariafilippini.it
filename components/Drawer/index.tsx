@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   Sheet,
@@ -19,17 +20,27 @@ export function Drawer() {
         <Menu />
       </SheetTrigger>
 
-      <SheetContent className="w-[300px]">
+      <SheetContent className="w-[275px] bg-gradient-to-br from-background to-muted border border-muted">
         <SheetHeader>
-          <SheetTitle>{title}</SheetTitle>
-          <SheetDescription>{subTitle}</SheetDescription>
+          <Image
+            className="rounded-full my-8 mx-auto"
+            src="/images/logo.jpg"
+            alt={title}
+            width={96}
+            height={96}
+          />
+
+          <SheetTitle className="text-center font-semibold">{title}</SheetTitle>
+          <SheetDescription className="text-center">
+            {subTitle}
+          </SheetDescription>
         </SheetHeader>
 
         <ul className="mt-4">
           {links.map(({ href, label, icon }) => (
             <li key={href}>
               <Link href={href}>
-                <SheetClose className="flex items-center gap-2 p-2">
+                <SheetClose className="flex items-center gap-4 p-2 hover:font-semibold">
                   {icon} {label}
                 </SheetClose>
               </Link>
