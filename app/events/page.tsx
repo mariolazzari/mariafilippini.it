@@ -11,7 +11,7 @@ function EventsPage() {
       );
     }
     return (
-      <div className="flex justify-center items-center gap-16 flex-wrap container mt-10">
+      <div className="flex justify-center items-center gap-16 flex-wrap container mt-10 mx-auto">
         {events.map((event, key) => (
           <Event key={key} event={event} />
         ))}
