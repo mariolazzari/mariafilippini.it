@@ -5,6 +5,7 @@ import { subTitle, title, start } from "@/lib/texts";
 import { Mail } from "lucide-react";
 import { CardImageProps } from "@/components/CardImage/CardImageProps";
 import { CardImage } from "@/components/CardImage";
+import Logo from "@/public/images/logo.jpg";
 
 function HomePage() {
   const cards: Omit<CardImageProps, "href">[] = [
@@ -46,13 +47,9 @@ function HomePage() {
 
   return (
     <main className="flex flex-col row-start-2 items-center">
-      <Image
-        className="rounded-full my-8"
-        src="/images/logo.jpg"
-        alt={title}
-        width={256}
-        height={256}
-      />
+      <div className="h-[96px] w-[96px] md:h-[256px] md:w-[256px]">
+        <Image className="rounded-full my-2" src={Logo} alt={title} priority />
+      </div>
 
       <div className="max-w-screen-lg text-center space-y-2 my-8">
         <h1 className="text-6xl">{title}</h1>

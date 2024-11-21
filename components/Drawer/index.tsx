@@ -12,6 +12,7 @@ import {
 import { Menu } from "lucide-react";
 import { title, subTitle } from "@/lib/texts";
 import { links } from "@/lib/links";
+import Logo from "@/public/images/logo.jpg";
 
 export function Drawer() {
   return (
@@ -22,13 +23,14 @@ export function Drawer() {
 
       <SheetContent className="w-[275px] bg-gradient-to-br from-background to-muted border border-muted">
         <SheetHeader>
-          <Image
-            className="rounded-full my-8 mx-auto"
-            src="/images/logo.jpg"
-            alt={title}
-            width={96}
-            height={96}
-          />
+          <div>
+            <Image
+              className="rounded-full h-24 w-24 my-8 mx-auto"
+              src={Logo}
+              alt={title}
+              priority
+            />
+          </div>
 
           <SheetTitle className="text-center font-semibold">{title}</SheetTitle>
           <SheetDescription className="text-center">

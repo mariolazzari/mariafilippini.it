@@ -1,7 +1,19 @@
 import { Anchor } from "@/types/Anchor";
 import { Home, User2, Book, Calendar, Link } from "lucide-react";
 
-export const routes = ["/", "/bio", "/works", "/events", "/contacts"];
+export const routes = [
+  "/",
+  "/bio",
+  "/works",
+  "/works/acts",
+  "/works/comedies",
+  "/works/dramas",
+  "/works/schools",
+  "/works/themes",
+  "/works/texts",
+  "/events",
+  "/contacts",
+];
 
 export const links: Anchor[] = [
   { label: "Home", href: "/", icon: <Home size={20} /> },
