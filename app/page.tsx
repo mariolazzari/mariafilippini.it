@@ -70,7 +70,7 @@ function HomePage() {
         </Button>
       </Link>
 
-      <div className="my-8 flex justify-center items-center gap-24 flex-wrap">
+      <div className="my-8 flex justify-center items-center gap-24 flex-wrap container">
         {cards.map(card => (
           <CardImage key={card.title} {...card} href="/works" />
         ))}
