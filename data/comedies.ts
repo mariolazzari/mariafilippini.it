@@ -817,7 +817,7 @@ export const comedies = [
     remarks: "",
   },
   {
-    title: "Paesopoli 27 43 – Lui tornerà",
+    title: "Paesopoli",
     titleDia: "",
     genre: "Commedia brillante in due atti",
     duration: "h 1 45m",
@@ -1068,6 +1068,32 @@ export const comedies = [
     plot: "In un paesino di montagna l’abitante più ricco e generoso muore lasciando la sua eredità a un nipote sconosciuto e da rintracciare. Chi sarà costui?  Sarà generoso come lo zio o sconvolgerà la vita semplice e tranquilla dei paesani?    La vicenda si intreccia con i continui e alterni tentativi del sindaco di scegliere per la figlia il genero ideale, senza tener conto dei suoi sentimenti",
     meaning:
       "Il giudizio che diamo sulle persone è spesso condizionato dalla loro posizione sociale.  Il sindaco non vuole il “madonnaro”  come marito per la figlia, ma quando scopre che è molto di più economicamente e socialmente, diventa il suo genero ideale, come se si     trattasse di un’altra persona",
+    remarks: "",
+  },
+  {
+    title: "Lui tornerà",
+    titleDia: "",
+    genre: "",
+    duration: "1h e 30m",
+    scene: "",
+    actors: "5 maschili e 4 femminili",
+    subject: "",
+    plot: "L'avvocato Edoardo, ricchissimo discendente di una dinastia di principi del foro, sposa la sua segretaria.  Al ritorno dalla luna di miele trova in casa la suocera e la cognata con i rispettivi amanti, decisi a rimanere stabilmente e a far la bella vita a sue spese. Sarà la vecchia balia a salvarlo dalla bancarottta e a toglierli quelle sanguisughe di dosso grazie al suo cervello fino da montanara.",
+    meaning:
+      "spesso cultura e intelligenza non sono accompagnati damalizia e furbizia.",
+    remarks: "",
+  },
+  {
+    title: "La principessa del quarantì",
+    titleDia: "",
+    genre: "",
+    duration: "1h e 30m",
+    scene: "",
+    actors: "sono disponibili due versioni: 4+4 e 4+6",
+    subject: "",
+    plot: "Riproposta di alcune figure della civiltà contadina, legate da una storia divertente: il norcino e il dazio, la frasca e l'ostessa che annacqua il vino, il seminarista, il suonatore del vertical, il ballo consederato un peccato...)",
+    meaning:
+      "La civiltà contadina era povera di mezzi, ma ricca di umanità e solidarietà e si radicava in principi religiosi e morali indiscutibili.",
     remarks: "",
   },
 ];
