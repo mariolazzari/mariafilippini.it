@@ -2,6 +2,11 @@ import { Works } from "@/components/Works";
 import { acts } from "@/data/acts";
 import { WorksPageProps } from "@/types/WorksPageProps";
 import { Clapperboard } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Atti unici",
+};
 
 async function ActsPage({ searchParams }: WorksPageProps) {
   const { search = "" } = await searchParams;

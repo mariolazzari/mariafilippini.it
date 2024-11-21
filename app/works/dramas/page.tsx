@@ -2,6 +2,11 @@ import { Works } from "@/components/Works";
 import { WorksPageProps } from "@/types/WorksPageProps";
 import { Drama } from "lucide-react";
 import { dramas } from "@/data/dramas";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Drammi",
+};
 
 async function DramasPage({ searchParams }: WorksPageProps) {
   const { search = "" } = await searchParams;

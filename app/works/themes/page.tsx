@@ -2,6 +2,11 @@ import { Works } from "@/components/Works";
 import { WorksPageProps } from "@/types/WorksPageProps";
 import { ScrollText } from "lucide-react";
 import { themes } from "@/data/themes";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tematiche",
+};
 
 async function ThemesPage({ searchParams }: WorksPageProps) {
   const { search = "" } = await searchParams;

@@ -1,5 +1,10 @@
 import { Event } from "@/components/Event";
 import { events } from "@/data/events";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Eventi",
+};
 
 function EventsPage() {
   const renderEvents = () => {

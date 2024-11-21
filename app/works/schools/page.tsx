@@ -2,6 +2,11 @@ import { Works } from "@/components/Works";
 import { WorksPageProps } from "@/types/WorksPageProps";
 import { GraduationCap } from "lucide-react";
 import { schools } from "@/data/schools";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Scuole",
+};
 
 async function SchoolsPage({ searchParams }: WorksPageProps) {
   const { search = "" } = await searchParams;

@@ -2,6 +2,11 @@ import { Works } from "@/components/Works";
 import { texts } from "@/data/texts";
 import { WorksPageProps } from "@/types/WorksPageProps";
 import { Book } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Testi",
+};
 
 async function TextsPage({ searchParams }: WorksPageProps) {
   const { search = "" } = await searchParams;

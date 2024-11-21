@@ -1,5 +1,10 @@
 import { Contact } from "@/components/Contact";
 import { ContactProps } from "@/components/Contact/ContactProps";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contatti",
+};
 
 function ContactsPage() {
   const contacts: ContactProps[] = [

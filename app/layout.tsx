@@ -14,12 +14,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title,
+  title: {
+    template: "%s | Maria Filippini Lazzari",
+    default: title,
+  },
   description,
   openGraph: {
     title,
     description,
   },
+  keywords: ["Commedia", "Teatro", "Brescia", "Dialetto"],
+  authors: [
+    { name: "Maria Filippini Lazzari" },
+    { name: "Mario Lazzari", url: "https://mariolazzari.itg" },
+  ],
+  creator: "Mario Lazzari",
 };
 
 function RootLayout({ children }: Layout) {

@@ -1,5 +1,10 @@
 import { CardImage } from "@/components/CardImage";
 import { CardImageProps } from "@/components/CardImage/CardImageProps";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Opere",
+};
 
 function WorksPage() {
   const cards: CardImageProps[] = [
