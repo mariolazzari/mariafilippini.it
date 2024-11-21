@@ -17,7 +17,7 @@ export function Header() {
           priority
         />
 
-        <ul className="hidden md:flex gap-2">
+        <ul className="hidden md:visible md:flex gap-2">
           {links.map(({ label, href, icon }) => (
             <li key={href}>
               <Link className="font-semibold flex gap-1" href={href}>
