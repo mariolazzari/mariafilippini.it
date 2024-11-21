@@ -43,7 +43,7 @@ function WorksPage() {
   ];
 
   return (
-    <>
+    <div className="mx-auto w-full">
       <h2 className="text-4xl text-center">Opere</h2>
 
       <p className="max-w-xl text-justify my-16 mx-auto">
@@ -54,12 +54,12 @@ function WorksPage() {
         categorie:
       </p>
 
-      <div className="flex justify-center items-center gap-16 flex-wrap container">
+      <div className="flex justify-center items-center gap-16 flex-wrap mx-auto container">
         {cards.map(card => (
           <CardImage key={card.href} {...card} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
