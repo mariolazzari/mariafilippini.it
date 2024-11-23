@@ -2,7 +2,6 @@
 
 import { Moon, Sun, Settings } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,16 +33,7 @@ export function ThemeToggle() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          className="rounded-full"
-          variant="ghost"
-          size="icon"
-          aria-label="theme"
-        >
-          {renderIcon()}
-        </Button>
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger>{renderIcon()}</DropdownMenuTrigger>
 
       <DropdownMenuContent align="end">
         {items.map(({ label, theme, icon }) => (
