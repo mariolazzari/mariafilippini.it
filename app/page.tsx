@@ -6,7 +6,6 @@ import { Mail } from "lucide-react";
 import { CardImageProps } from "@/components/CardImage/CardImageProps";
 import { CardImage } from "@/components/CardImage";
 import Logo from "@/public/images/logo.jpg";
-import { Metadata } from "next";
 
 function HomePage() {
   const cards: Omit<CardImageProps, "href">[] = [
