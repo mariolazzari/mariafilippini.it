@@ -33,7 +33,9 @@ export function ThemeToggle() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>{renderIcon()}</DropdownMenuTrigger>
+      <DropdownMenuTrigger aria-label="theme">
+        {renderIcon()}
+      </DropdownMenuTrigger>
 
       <DropdownMenuContent align="end">
         {items.map(({ label, theme, icon }) => (
