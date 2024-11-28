@@ -70,11 +70,11 @@ function BioPage() {
             (Massetti-Rodella Editore)
           </li>
           <li>
-            <span className="font-bold mr-1">C’era una volta</span> (Cooperativa
-            Serena di Lograto)
+            <span className="font-bold mr-1">C&apos;era una volta</span>{" "}
+            (Cooperativa Serena di Lograto)
           </li>
           <li>
-            in: <span className="font-bold mr-1">'C’era una volta'</span>
+            in: <span className="font-bold mr-1">'C&apos;era una volta'</span>
             (Cooperativa Serena di Lograto)
           </li>
           <li>
