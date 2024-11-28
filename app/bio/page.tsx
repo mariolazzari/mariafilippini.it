@@ -3,6 +3,9 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Biografia",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 function BioPage() {

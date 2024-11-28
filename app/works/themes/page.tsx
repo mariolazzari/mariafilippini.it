@@ -6,6 +6,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tematiche",
+  alternates: {
+    canonical: "/works/themes",
+  },
 };
 
 async function ThemesPage({ searchParams }: WorksPageProps) {

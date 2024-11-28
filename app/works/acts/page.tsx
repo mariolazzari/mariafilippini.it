@@ -6,6 +6,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Atti unici",
+  alternates: {
+    canonical: "/works/acts",
+  },
 };
 
 async function ActsPage({ searchParams }: WorksPageProps) {

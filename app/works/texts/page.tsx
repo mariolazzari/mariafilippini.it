@@ -6,6 +6,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Testi",
+  alternates: {
+    canonical: "/works/texts",
+  },
 };
 
 async function TextsPage({ searchParams }: WorksPageProps) {

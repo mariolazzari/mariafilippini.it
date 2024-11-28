@@ -14,14 +14,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mariafilippini.it"),
   title: {
     template: "%s | Maria Filippini Lazzari",
     default: title,
+  },
+  alternates: {
+    canonical: "/",
   },
   description,
   openGraph: {
     title,
     description,
+    images: "/images/logo.jpg",
+    url: "https://mariafilippini.it",
+    siteName: "Maria Filippini Lazzari",
   },
   keywords: ["Commedia", "Teatro", "Brescia", "Dialetto"],
   authors: [
