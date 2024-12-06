@@ -6,7 +6,7 @@ import { title, description } from "@/lib/texts";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/Theme/ThemeProvider";
-import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -52,7 +52,6 @@ function RootLayout({ children }: Layout) {
           <Footer />
         </ThemeProvider>
 
-        <GoogleTagManager gtmId="G-LJE466BM11" />
         <GoogleAnalytics gaId="G-K8TH2BH1F9" />
       </body>
     </html>
