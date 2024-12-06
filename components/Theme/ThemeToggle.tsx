@@ -2,6 +2,8 @@
 
 import { Moon, Sun, Settings } from "lucide-react";
 import { useTheme } from "next-themes";
+
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   const items = [
     { label: "Chiaro", theme: "light", icon: <Sun /> },
@@ -18,25 +20,15 @@ export function ThemeToggle() {
     { label: "Sistema", theme: "system", icon: <Settings /> },
   ];
 
-  const renderIcon = () => {
-    switch (theme) {
-      case "light":
-        return <Sun size={28} />;
-
-      case "dark":
-        return <Moon size={28} />;
-
-      default:
-        return <Settings size={28} />;
-    }
-  };
-
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger aria-label="theme">
-        {renderIcon()}
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon">
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
       </DropdownMenuTrigger>
-
       <DropdownMenuContent align="end">
         {items.map(({ label, theme, icon }) => (
           <DropdownMenuItem key={theme} onClick={() => setTheme(theme)}>

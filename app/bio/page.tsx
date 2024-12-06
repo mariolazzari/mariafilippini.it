@@ -4,13 +4,13 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Biografia",
   alternates: {
-    canonical: "/about",
+    canonical: "/bio",
   },
 };
 
 function BioPage() {
   return (
-    <div className="mx-auto p-8 max-w-5xl bg-secondary">
+    <div className="mx-auto p-8 max-w-5xl bg-secondary rounded-xl">
       <h2 className="mt-10 text-3xl font-semibold border-b pb-2">Biografia</h2>
 
       <p className="text-justify my-4">

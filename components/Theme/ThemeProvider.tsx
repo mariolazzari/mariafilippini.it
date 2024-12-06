@@ -1,14 +1,7 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ComponentProps } from "react";
-
-const NextThemesProvider = dynamic(
-  () => import("next-themes").then(e => e.ThemeProvider),
-  {
-    ssr: false,
-  }
-);
 
 export function ThemeProvider({
   children,

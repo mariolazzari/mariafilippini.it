@@ -40,7 +40,11 @@ export const metadata: Metadata = {
 
 function RootLayout({ children }: Layout) {
   return (
-    <html lang="it">
+    <html lang="it" suppressHydrationWarning>
+      <head>
+        <GoogleAnalytics gaId="G-K8TH2BH1F9" />
+      </head>
+
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
@@ -51,8 +55,6 @@ function RootLayout({ children }: Layout) {
 
           <Footer />
         </ThemeProvider>
-
-        <GoogleAnalytics gaId="G-K8TH2BH1F9" />
       </body>
     </html>
   );
