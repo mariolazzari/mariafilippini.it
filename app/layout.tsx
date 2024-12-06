@@ -41,36 +41,6 @@ export const metadata: Metadata = {
 function RootLayout({ children }: Layout) {
   return (
     <html lang="it">
-      <head>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon-96x96.png"
-          sizes="96x96"
-        />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-
-        <meta property="og:image" content="<generated>" />
-        <meta property="og:image:type" content="<generated>" />
-        <meta property="og:image:width" content="<generated>" />
-        <meta property="og:image:height" content="<generated>" />
-
-        <meta name="twitter:image" content="<generated>" />
-        <meta name="twitter:image:type" content="<generated>" />
-        <meta name="twitter:image:width" content="<generated>" />
-        <meta name="twitter:image:height" content="<generated>" />
-
-        <GoogleTagManager gtmId="G-LJE466BM11" />
-        <GoogleAnalytics gaId="G-K8TH2BH1F9" />
-      </head>
-
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
@@ -81,6 +51,9 @@ function RootLayout({ children }: Layout) {
 
           <Footer />
         </ThemeProvider>
+
+        <GoogleTagManager gtmId="G-LJE466BM11" />
+        <GoogleAnalytics gaId="G-K8TH2BH1F9" />
       </body>
     </html>
   );
