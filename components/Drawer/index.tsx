@@ -21,7 +21,7 @@ export function Drawer() {
         <Menu aria-label="Menu" />
       </SheetTrigger>
 
-      <SheetContent className="w-[275px] bg-gradient-to-br from-background to-muted border border-muted">
+      <SheetContent className="w-[275px] bg-linear-to-br from-background to-muted border border-muted">
         <SheetHeader>
           <div>
             <Image

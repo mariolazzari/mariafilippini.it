@@ -93,7 +93,7 @@ function BioPage() {
         <Image src="/images/vesse.jpg" alt="vesse" width={200} height={300} />
       </div>
 
-      <p className="leading-7 [&:not(:first-child)]:mt-6">
+      <p className="leading-7 not-first:mt-6">
         Da tre anni l’autrice collabora con la{" "}
         <span className="font-bold mx-1">Fondazione Don Primo Mazzolari</span>
         scrivendo sceneggiature tratte dalle sue opere, quali{" "}

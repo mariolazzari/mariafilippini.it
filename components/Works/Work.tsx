@@ -18,7 +18,7 @@ export function Work({ work }: WorkProps) {
   } = work;
 
   return (
-    <div className="w-[350px] md:w-[400px] h-[450px] p-4 border border-secondary hover:border-primary shadow-xl rounded-xl bg-gradient-to-br from-background to-muted">
+    <div className="w-[350px] md:w-[400px] h-[450px] p-4 border border-secondary hover:border-primary shadow-xl rounded-xl bg-linear-to-br from-background to-muted">
       <div className="h-[50px]">
         <h2 className="font-semibold text-center">{title}</h2>
         <h3 className="text-xs text-center">{titleDia}</h3>

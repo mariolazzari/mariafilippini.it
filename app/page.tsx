@@ -51,7 +51,7 @@ function HomePage() {
         <Image className="rounded-full my-2" src={Logo} alt={title} priority />
       </div>
 
-      <div className="max-w-screen-lg text-center space-y-2 my-8">
+      <div className="max-w-(--breakpoint-lg) text-center space-y-2 my-8">
         <h1 className="text-6xl">{title}</h1>
         <h2 className="text-4xl">{subTitle}</h2>
         <h2 className="text-2xl">{start}</h2>
