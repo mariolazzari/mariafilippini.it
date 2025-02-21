@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/Theme/ThemeProvider";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Cookies } from "@/components/Cookies";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,12 +49,11 @@ function RootLayout({ children }: Layout) {
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
-
           <main className="p-4 w-full h-[calc(100dvh-100px)] overflow-y-auto">
             {children}
           </main>
-
           <Footer />
+          <Cookies />
         </ThemeProvider>
       </body>
     </html>
