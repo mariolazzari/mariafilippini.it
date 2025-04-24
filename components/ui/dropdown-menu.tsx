@@ -19,13 +19,9 @@ const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 
 type DropdownMenuSubTriggerProps = ComponentProps<
   typeof DropdownMenuPrimitive.SubTrigger
-> & {
-  inset?: boolean;
-};
+>;
 
 function DropdownMenuSubTrigger({
-  className,
-  inset,
   children,
   ...props
 }: DropdownMenuSubTriggerProps) {
@@ -114,9 +110,7 @@ type DropdownMenuCheckboxItemProps = ComponentProps<
 >;
 
 function DropdownMenuCheckboxItem({
-  className,
   children,
-  checked,
   ...props
 }: DropdownMenuCheckboxItemProps) {
   return (
