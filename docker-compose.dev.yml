@@ -17,6 +17,7 @@ services:
       - db
       - redis
       - backend
+    restart: unless-stopped
 
   backend:
     build:
